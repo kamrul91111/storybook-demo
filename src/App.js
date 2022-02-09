@@ -1,20 +1,25 @@
 import React, {useState} from "react";
 import "./App.css";
-import {Button, DangerButton, PrimaryButton} from "./Button/Button";
+
+// emotion components
+import {Button, DangerButton, PrimaryButton} from "./Components/Button/Button";
+// storybook
+import {Header} from "./stories/Header";
+import {Small} from "./stories/Button.stories";
 
 const App = () => {
   const [hovered, setHovered] = useState(false); //check if mouse is hovering over button
 
   return (
     <div className="App">
-      <h1>Emotion/Storybooks Project</h1>
+      <Header />
       <p>
         This is a dummy project created with create-react-app to implement
         Storybooks and Emotion.
       </p>
-      <div>
+      <div style={{display: "flex", margin: 25, gridColumn: 1}}>
         {/* contain emotion */}
-        <div>
+        <div style={{backgroundColor: "lightpink", width: "50%", padding: 15}}>
           <h3>Emotion Components</h3>
           <Button onClick={() => alert("henlo fren")}>Disa Button</Button>
           <PrimaryButton>Primary Button</PrimaryButton>
@@ -28,7 +33,14 @@ const App = () => {
           </DangerButton>
         </div>
         {/* storybook components */}
-        <div></div>
+        <div style={{backgroundColor: "gainsboro", width: "50%", padding: 15}}>
+          <h3>Storybook component</h3>
+          <Small
+            onClick={() => alert("This component is built using storybook")}
+            label="Secondary"
+            backgroundColor="yellow"
+          />
+        </div>
       </div>
     </div>
   );
