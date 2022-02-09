@@ -15,6 +15,7 @@ const App = () => {
       <div>
         {/* contain emotion */}
         <div>
+          <h3>Emotion Components</h3>
           <Button onClick={() => alert("henlo fren")}>Disa Button</Button>
           <PrimaryButton>Primary Button</PrimaryButton>
           {/* when mouse hovers, set hovered to true, else false */}
@@ -26,6 +27,8 @@ const App = () => {
             Danger Button
           </DangerButton>
         </div>
+        {/* storybook components */}
+        <div></div>
       </div>
     </div>
   );
